@@ -1,0 +1,48 @@
+{
+  "name": "Network",
+  "version": "0.1.0",
+  "summary": "A short description of Network.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/95286760/Network",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "95286760": "lasyquan@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/95286760/Network.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "Network/Classes/**/*",
+  "resource_bundles": {
+    "Network": [
+      "Network/Assets/Storyboards/**/*.storyboard",
+      "Network/Assets/Xibs/**/*.xib",
+      "Network/Assets/Resources/**/*.xcassets",
+      "Network/Classes/**/*.xib",
+      "Network/Classes/**/*.storyboard"
+    ]
+  },
+  "dependencies": {
+    "RxSwift": [
+      "~> 5"
+    ],
+    "ObjectMapper": [
+      "4.2.0"
+    ],
+    "Alamofire": [
+      "~> 5.4"
+    ],
+    "TUSKit": [
+      "~> 1.4.2"
+    ],
+    "SVProgressHUD": [
+
+    ]
+  }
+}

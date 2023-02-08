@@ -1,0 +1,17 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'Network_Example' do
+  pod 'Network', :path => '../'
+  pod 'ObjectMapper', '4.2.0'
+  pod 'Alamofire', '~> 5.4'
+  pod 'RxSwift', '~> 5'
+  pod 'TUSKit', '~> 1.4.2'
+  pod 'SVProgressHUD'
+  target 'Network_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
