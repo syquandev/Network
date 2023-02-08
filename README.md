@@ -22,7 +22,7 @@ pod 'Network'
 
 ## Author
 
-95286760, lasyquan@gmail.com
+Sy Quan, syquandev@gmail.com
 
 ## License
 
