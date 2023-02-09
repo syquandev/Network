@@ -63,10 +63,10 @@ extension IBaseModel{
 }
 
 public extension Array where Element:IBaseModel {
-    public func jsonString() -> String? {
+    func jsonString() -> String? {
         return Mapper().toJSONString(self)
     }
-    public func jsonData() -> Data? {
+    func jsonData() -> Data? {
         return Mapper().toJSONString(self)?.data(using: .utf8)
     }
 }
@@ -115,6 +115,23 @@ open class BaseModel: NSObject, IBaseModel, DiffBaseModel {
     
     open func isNeedUpdate() -> Bool {
         return self.needUpdate
+    }
+    
+    @discardableResult
+    public func saveCache(_ name: String, folder: String? = nil) -> Bool{
+        if let jsonData = self.toJSONString(){
+            let result = FileUltilities.saveFile(name: name, string: jsonData, folder: folder)
+            return result
+        }
+        return false
+    }
+    
+    public static func loadCache<T: BaseModel>(_ name: String, folder: String? = nil) -> T?{
+        
+        if let data = FileUltilities.loadFile(name: name, folder: folder){
+            return T.create(data: data)
+        }
+        return nil
     }
     
     open func propertyNames() -> [String] {

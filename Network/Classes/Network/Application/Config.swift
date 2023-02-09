@@ -28,7 +28,9 @@ open class Config: NSObject{
     
     public static var basicClientAuth = ""
     
+    public static let sessionFolderName = "Session"
     public static let uploadFolderName = "Upload"
+    
     public static let mailValidateRegex  = "[a-zA-Z0-9._%\\-+]{1,256}@[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}(\\.[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25})+"
     public static let phoneValidateRegex = "(\\+[0-9]+[\\- \\.]*)?(\\([0-9]+\\)[\\- \\.]*)?([0-9][0-9\\- \\.]+[0-9])"
     public static let nameSpecialCharacterRegex = "[0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:]|[\\[\\]]"
