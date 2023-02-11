@@ -24,17 +24,20 @@ class ViewController: UIViewController {
     
     func api(){
         let rq = AuthAPI.Login()
-        HUDBuilder.showLoading()
-        rq.request { status, model in
-            HUDBuilder.showStatus(status)
-            if status.isError{
-                HUDBuilder.showAlert(message: status.message)
-            }
-            else{
-                print(status.code)
-                print(model?.name)
+        HUDLoading.showLoading(self.view,.infinity)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            rq.request { status, model in
+                HUDLoading.dismiss()
+                if status.isError{
+                    HUDBuilder.showAlert(message: status.message)
+                }
+                else{
+                    print(status.code)
+                    print(model?.name)
+                }
             }
         }
+        
     }
 
 }
