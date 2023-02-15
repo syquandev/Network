@@ -106,7 +106,7 @@ public class QuarbitView: UIView {
         dotDark2.layer.position = CGPoint(x: 4, y: 16.67)
         dotDark2.layer.bounds = CGRect(x: 0, y: 0, width: 6, height: 6)
         dotDark2.layer.masksToBounds = false
-        dotDark2.shapeLayer.fillRule = kCAFillRuleEvenOdd
+        dotDark2.shapeLayer.fillRule = CAShapeLayerFillRule.evenOdd
         dotDark2.shapeLayer.strokeColor = UIColor.yellow.cgColor//UIColor.init(red: 233.0/255.0, green: 194.0/255.0, blue: 84.0/255.0, alpha: 1).cgColor
         dotDark2.shapeLayer.fillColor = UIColor.yellow.cgColor //UIColor(red: 0.086, green: 0.086, blue: 0.114, alpha: 1).cgColor
         dotDark2.shapeLayer.lineDashPattern = []
@@ -126,7 +126,7 @@ public class QuarbitView: UIView {
         dotLight2.layer.position = CGPoint(x: 4, y: -8.67)
         dotLight2.layer.bounds = CGRect(x: 0, y: 0, width: 6, height: 6)
         dotLight2.layer.masksToBounds = false
-        dotLight2.shapeLayer.fillRule = kCAFillRuleEvenOdd
+        dotLight2.shapeLayer.fillRule = CAShapeLayerFillRule.evenOdd
         dotLight2.shapeLayer.strokeColor =  UIColor.yellow.cgColor  // UIColor(red: 0.992, green: 0.004, blue: 0.471, alpha: 1).cgColor
         dotLight2.shapeLayer.fillColor =  UIColor.yellow.cgColor  // UIColor(red: 0.086, green: 0.086, blue: 0.114, alpha: 1).cgColor
         dotLight2.shapeLayer.lineDashPattern = []
@@ -145,7 +145,7 @@ public class QuarbitView: UIView {
         dotDark1.layer.position = CGPoint(x: 4, y: 4)
         dotDark1.layer.bounds = CGRect(x: 0, y: 0, width: 8, height: 8)
         dotDark1.layer.masksToBounds = false
-        dotDark1.shapeLayer.fillRule = kCAFillRuleEvenOdd
+        dotDark1.shapeLayer.fillRule = CAShapeLayerFillRule.evenOdd
         dotDark1.shapeLayer.strokeColor =  UIColor.yellow.cgColor  //UIColor(red: 0.992, green: 0.004, blue: 0.471, alpha: 1).cgColor
         dotDark1.shapeLayer.fillColor =  UIColor.yellow.cgColor  //UIColor(red: 0.086, green: 0.086, blue: 0.114, alpha: 1).cgColor
         dotDark1.shapeLayer.lineDashPattern = []
@@ -165,7 +165,7 @@ public class QuarbitView: UIView {
         dotLight1.layer.position = CGPoint(x: 4, y: 4)
         dotLight1.layer.bounds = CGRect(x: 0, y: 0, width: 4, height: 4)
         dotLight1.layer.masksToBounds = false
-        dotLight1.shapeLayer.fillRule = kCAFillRuleEvenOdd
+        dotLight1.shapeLayer.fillRule = CAShapeLayerFillRule.evenOdd
         dotLight1.shapeLayer.strokeColor =  UIColor.yellow.cgColor  // UIColor(red: 0.992, green: 0.004, blue: 0.471, alpha: 1).cgColor
         dotLight1.shapeLayer.fillColor =  UIColor.yellow.cgColor  //UIColor(red: 0.086, green: 0.086, blue: 0.114, alpha: 1).cgColor
         dotLight1.shapeLayer.lineDashPattern = []

@@ -46,7 +46,7 @@ open class Animation: NSObject, CAAnimationDelegate {
     private func configure(keyframeAnimation: CAKeyframeAnimation) {
         keyframeAnimation.delegate = self
         keyframeAnimation.isRemovedOnCompletion = false
-        keyframeAnimation.fillMode = kCAFillModeBoth
+        keyframeAnimation.fillMode = CAMediaTimingFillMode.both
         keyframeAnimation.autoreverses = autoreverses
         keyframeAnimation.repeatCount = repeatCount
     }

@@ -15,8 +15,9 @@
     "git": "https://github.com/95286760/Network.git",
     "tag": "0.1.0"
   },
+  "swift_versions": "4.2",
   "platforms": {
-    "ios": "10.0"
+    "ios": "11.0"
   },
   "source_files": "Network/Classes/**/*",
   "resource_bundles": {
@@ -44,5 +45,6 @@
     "SVProgressHUD": [
 
     ]
-  }
+  },
+  "swift_version": "4.2"
 }

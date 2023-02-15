@@ -40,7 +40,7 @@ open class ShapeView: UIView {
         gradientLayer.endPoint = endPoint
         gradientLayer.colors = stops.map { $0.color }
         gradientLayer.locations = stops.map { $0.location }
-        gradientLayer.type = type as String
+        gradientLayer.type = type
         gradientLayer.frame = shapeLayer.bounds
         gradientLayer.mask = mask
     }

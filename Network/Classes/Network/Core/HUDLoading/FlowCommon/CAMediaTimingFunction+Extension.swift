@@ -4,10 +4,10 @@ import Foundation
 import UIKit
 
 public extension CAMediaTimingFunction {
-    static let linear = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-    static let easeIn = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
-    static let easeOut = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-    static let easeInEaseOut = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+    static let linear = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
+    static let easeIn = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
+    static let easeOut = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+    static let easeInEaseOut = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
 
     var reversed: CAMediaTimingFunction {
         let (c1, c2) = controlPoints

@@ -74,7 +74,7 @@ public class InfinityView: UIView {
         gradient.layer.position = CGPoint(x: 18.5, y: 18.5)
         gradient.layer.bounds = CGRect(x: 0, y: 0, width: 37, height: 37)
         gradient.layer.masksToBounds = false
-        gradient.shapeLayer.fillRule = kCAFillRuleEvenOdd
+        gradient.shapeLayer.fillRule = CAShapeLayerFillRule.evenOdd
         gradient.shapeLayer.fillColor = nil
         gradient.shapeLayer.lineDashPattern = []
         gradient.shapeLayer.lineDashPhase = 0
@@ -86,7 +86,7 @@ public class InfinityView: UIView {
         let colors = [UIColor(red: 0.992, green: 0.004, blue: 0.471, alpha: 1).cgColor, UIColor(red: 0.314, green: 0.888, blue: 0.76, alpha: 1).cgColor, UIColor(red: 0.314, green: 0.888, blue: 0.76, alpha: 1).cgColor, UIColor(red: 0, green: 0, blue: 1, alpha: 1).cgColor]
         let locations = [NSNumber(value: 0), NSNumber(value: 0.471045), NSNumber(value: 0.523164), NSNumber(value: 1)]
         let stops = zip(colors, locations).map { $0 }
-        let type: CAGradientLayerType = CAGradientLayerType(string: kCAGradientLayerAxial)
+        let type: CAGradientLayerType = .axial
         gradient.addGradient(type: type, startPoint: startPoint, endPoint: endPoint, stops: stops)
     }
 
@@ -99,10 +99,10 @@ public class InfinityView: UIView {
         infinity.layer.position = CGPoint(x: 18.49, y: 18.64)
         infinity.layer.bounds = CGRect(x: 0, y: 0, width: 28.97, height: 11.28)
         infinity.layer.masksToBounds = false
-        infinity.shapeLayer.fillRule = kCAFillRuleEvenOdd
+        infinity.shapeLayer.fillRule = CAShapeLayerFillRule.evenOdd
         infinity.shapeLayer.strokeColor = UIColor(red: 0.114, green: 0.114, blue: 0.086, alpha: 1).cgColor
         infinity.shapeLayer.fillColor = nil
-        infinity.shapeLayer.lineCap = CAShapeLayerLineCap(string: "round") as String
+        infinity.shapeLayer.lineCap = CAShapeLayerLineCap(rawValue: "round")
         infinity.shapeLayer.strokeEnd = 0.2
         infinity.shapeLayer.lineDashPattern = []
         infinity.shapeLayer.lineDashPhase = 0

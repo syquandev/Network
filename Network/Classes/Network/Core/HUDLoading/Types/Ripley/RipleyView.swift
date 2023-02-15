@@ -83,7 +83,7 @@ public class RipleyView: UIView {
         pulse1.layer.position = CGPoint(x: 18.5, y: 18.5)
         pulse1.layer.bounds = CGRect(x: 0, y: 0, width: 10, height: 10)
         pulse1.layer.masksToBounds = false
-        pulse1.shapeLayer.fillRule = kCAFillRuleEvenOdd
+        pulse1.shapeLayer.fillRule = CAShapeLayerFillRule.evenOdd
         pulse1.shapeLayer.strokeColor = UIColor(red: 0.992, green: 0.004, blue: 0.471, alpha: 1).cgColor
         pulse1.shapeLayer.fillColor = UIColor(red: 0, green: 0, blue: 1, alpha: 0).cgColor
         pulse1.shapeLayer.lineDashPattern = []
@@ -103,7 +103,7 @@ public class RipleyView: UIView {
         pulse2.layer.position = CGPoint(x: 18.5, y: 18.5)
         pulse2.layer.bounds = CGRect(x: 0, y: 0, width: 18, height: 18)
         pulse2.layer.masksToBounds = false
-        pulse2.shapeLayer.fillRule = kCAFillRuleEvenOdd
+        pulse2.shapeLayer.fillRule = CAShapeLayerFillRule.evenOdd
         pulse2.shapeLayer.strokeColor = UIColor(red: 0.992, green: 0.004, blue: 0.471, alpha: 1).cgColor
         pulse2.shapeLayer.fillColor = UIColor(red: 0, green: 0, blue: 1, alpha: 0).cgColor
         pulse2.shapeLayer.lineDashPattern = []
@@ -124,7 +124,7 @@ public class RipleyView: UIView {
         pulse3.layer.bounds = CGRect(x: 0, y: 0, width: 26, height: 26)
         pulse3.layer.masksToBounds = false
 //        pulse3.shapeLayer.fillRule = CAShapeLayerFillRule.evenOdd
-        pulse3.shapeLayer.fillRule = kCAFillRuleEvenOdd
+        pulse3.shapeLayer.fillRule = CAShapeLayerFillRule.evenOdd
         pulse3.shapeLayer.strokeColor = UIColor(red: 0.992, green: 0.004, blue: 0.471, alpha: 1).cgColor
         pulse3.shapeLayer.fillColor = UIColor(red: 0, green: 0, blue: 1, alpha: 0).cgColor
         pulse3.shapeLayer.lineDashPattern = []
@@ -144,7 +144,7 @@ public class RipleyView: UIView {
         pulse4.layer.position = CGPoint(x: 18.5, y: 18.5)
         pulse4.layer.bounds = CGRect(x: 0, y: 0, width: 34, height: 34)
         pulse4.layer.masksToBounds = false
-        pulse4.shapeLayer.fillRule = kCAFillRuleEvenOdd
+        pulse4.shapeLayer.fillRule = CAShapeLayerFillRule.evenOdd
         pulse4.shapeLayer.strokeColor = UIColor(red: 0.992, green: 0.004, blue: 0.471, alpha: 1).cgColor
         pulse4.shapeLayer.fillColor = UIColor(red: 0, green: 0, blue: 1, alpha: 0).cgColor
         pulse4.shapeLayer.lineDashPattern = []
@@ -164,7 +164,7 @@ public class RipleyView: UIView {
         pulse5.layer.position = CGPoint(x: 18.5, y: 18.5)
         pulse5.layer.bounds = CGRect(x: 0, y: 0, width: 42, height: 42)
         pulse5.layer.masksToBounds = false
-        pulse5.shapeLayer.fillRule = kCAFillRuleEvenOdd
+        pulse5.shapeLayer.fillRule = CAShapeLayerFillRule.evenOdd
         pulse5.shapeLayer.strokeColor = UIColor(red: 0.992, green: 0.004, blue: 0.471, alpha: 1).cgColor
         pulse5.shapeLayer.fillColor = UIColor(red: 0, green: 0, blue: 1, alpha: 0).cgColor
         pulse5.shapeLayer.lineDashPattern = []
@@ -184,7 +184,7 @@ public class RipleyView: UIView {
         pulse6.layer.position = CGPoint(x: 18.5, y: 18.5)
         pulse6.layer.bounds = CGRect(x: 0, y: 0, width: 10, height: 10)
         pulse6.layer.masksToBounds = false
-        pulse6.shapeLayer.fillRule = kCAFillRuleEvenOdd
+        pulse6.shapeLayer.fillRule = CAShapeLayerFillRule.evenOdd
         pulse6.shapeLayer.strokeColor = UIColor(red: 0.992, green: 0.004, blue: 0.471, alpha: 1).cgColor
         pulse6.shapeLayer.fillColor = UIColor(red: 0, green: 0, blue: 1, alpha: 0).cgColor
         pulse6.shapeLayer.lineDashPattern = []

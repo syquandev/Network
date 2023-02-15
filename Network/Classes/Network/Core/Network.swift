@@ -63,8 +63,7 @@ public class Network: NSObject{
         
         if !Network.shared.getReachable(){
             if show{
-//                HUDBuilder.showAlert(message: "network_error".localized)
-                
+                HUDBuilder.showAlert(message: "Network error")
             }
             return true
         }
@@ -328,7 +327,7 @@ public class Network: NSObject{
                        let url = URL(string: urlString){
                         multipartFormData.append(url, withName: name, fileName: fileName , mimeType: type)
                     } else if let image = item.image,
-                              let data = UIImageJPEGRepresentation(image, 0.5){
+                              let data = image.jpegData(compressionQuality: 0.5){
                         multipartFormData.append(data, withName: name, fileName: "\(fileName).jpg" , mimeType: "image/jpeg")
                     } else if let data = item.data{
                         multipartFormData.append(data, withName: name, fileName: fileName , mimeType: type)

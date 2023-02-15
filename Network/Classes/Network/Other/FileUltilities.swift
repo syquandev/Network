@@ -163,7 +163,7 @@ public class FileUltilities: NSObject {
         guard let image = image else{
             return nil
         }
-        guard let data = UIImageJPEGRepresentation(image, 0.5) else{
+        guard let data = image.jpegData(compressionQuality: 0.5) else{
             return nil
         }
         let name =  UUID().uuidString + ".jpg"
