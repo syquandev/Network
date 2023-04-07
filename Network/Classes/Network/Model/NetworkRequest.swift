@@ -10,3 +10,11 @@ import UIKit
 public protocol NetworkRequest: class {
     func cancelRequest()
 }
+
+public class NetworkRequestHolder: NSObject, NetworkRequest{
+    public var request: NetworkRequest?
+    
+    public func cancelRequest() {
+        request?.cancelRequest()
+    }
+}

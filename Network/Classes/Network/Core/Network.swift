@@ -395,4 +395,80 @@ public class Network: NSObject{
     public func methodFromBase(_ input: Network.Method) -> HTTPMethod{
         return HTTPMethod(rawValue: input.rawValue)
     }
+    
+    //MARK - Uploader
+    
+    public func uploadFile(_ requestData: UploadRequest, completionHandler: @escaping NetworkResponseHandler, process: ((Int64, Int64) -> Void)? = nil) -> NetworkRequest? {
+        
+        let uploader = NetworkUploader(request: requestData)
+        uploader.process = process
+        if uploader.prepare(){
+            uploader.handler = completionHandler
+            uploader.resume()
+            return uploader
+        }
+        return nil
+    }
+    
+    @discardableResult
+    public func uploadImage(_ image: UIImage, handler: @escaping ((ResponseStatus, UploadMediaResult?) -> Void)) -> NetworkRequest?{
+
+        if let url = FileUltilities.saveImage(image){
+            return self.uploadImage(url, handler: handler)
+        }
+        return nil
+    }
+    
+    @discardableResult
+    public func uploadImage(_ url: URL, handler: @escaping ((ResponseStatus, UploadMediaResult?) -> Void), process: ((Int64, Int64) -> Void)? = nil) -> NetworkRequest?{
+        
+        let request = UploadMediaRequest(image: url)
+        
+        return uploadFile(request, completionHandler: { (status, result) in
+            if let result = result {
+                FileUltilities.removeURL(url)
+                let info = UploadMediaResult.create(dictionary: result)
+                info?.updatePath()
+                handler(status, info)
+                return
+            }
+            handler(status, nil)
+        }, process: process)
+    }
+    
+    @discardableResult
+    public func uploadVideoLimit(_ url: URL, handler: @escaping ((ResponseStatus, UploadMediaResult?) -> Void), process: ((Int64, Int64) -> Void)? = nil) -> NetworkRequest? {
+        let request = UploadMediaRequest(url: url)
+        
+        return uploadFile(request, completionHandler: { (status, result) in
+            FileUltilities.removeURL(url)
+            if let result = result {
+                let info = UploadMediaResult.create(dictionary: result)
+                info?.updatePath()
+                handler(status, info)
+                return
+            }
+            handler(status, nil)
+        }, process: process)
+    }
+    
+//    @discardableResult
+//    public func uploadMedia(_ media: MediaFeedModel, handler:  @escaping ((ResponseStatus, UploadMediaResult?) -> Void)) -> NetworkRequest?{
+//        let requestHolder = NetworkRequestHolder()
+//        if let image = media.image {
+//            requestHolder.request = self.uploadImage(image, handler: handler)
+//            return requestHolder
+//        }
+//
+//        if let export = media.export{
+//            export.exportData { (url, string) in
+//                if let url = url {
+//                    requestHolder.request = self.uploadVideoLimit(url, handler: handler)
+//                }
+//            }
+//            return requestHolder
+//        }
+//
+//        return nil
+//    }
 }

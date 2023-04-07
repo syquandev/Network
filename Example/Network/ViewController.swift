@@ -39,6 +39,16 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    func upload(){
+//        Network.shared.uploadVideoLimit(url, handler: { (status, info) in
+//            self?.uploadMediaSuccess(media, info: info)
+//        }, process:{ (written, total) in
+//            media.uploadTotal = total
+//            media.uploadWritten = written
+//            self?.updateUploadPercent()
+//        })
+    }
 
 }
 
